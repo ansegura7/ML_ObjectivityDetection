@@ -20,6 +20,52 @@ Two datasets were created from the raw data (the 1000 sport articles) using term
 ## Results
 Below some results obtained in this paper. For more detail, please read the full paper.
 
+### Experiment 1 – SL vs SSL for Dataset 1
+
+Average precision of the models for experiment 1 - second scenario:
+
+| Model | Accuracy | Error | # Objective | # Subjective | % Objective | % Subjective |
+|---|---|---|---|---|---|---|
+| Base Line | 63.50 | 36.50 | 635 | 365 | 100.00 | 100.00 |
+| Bayes | 79.90 | 20.10 | 567 | 232 | 89.29 | 63.56 |
+| SVM Linear | 83.40 | 16.60 | 583 | 251 | 91.75 | 68.88 |
+| SVM Poly | 73.53 | 26.47 | 497 | 238 | 78.33 | 65.18 |
+| **Random Forest 200** | 82.89 | 17.11 | 557 | 272 | 87.78 | 74.38 |
+| Random Forest 300 | 82.75 | 17.25 | 558 | 270 | 87.81 | 73.95 |
+| Ada Boost | 81.04 | 18.96 | 545 | 265 | 85.86 | 72.66 |
+
+Gradient Boosting Accuracy with Co-Training for Dataset 1:
+
+| Gradient Boosting with CT | 10% of Data | 20% of Data | 30% of Data | 40% of Data | 50% of Data |
+|---|---|---|---|---|---|
+| Global Accuracy | 76.60 | 77.11 | 78.13 | 78.43 | 78.72 |
+
+#### SL vs SSL for Dataset1
+
+![SL vs SSL for Dataset1](https://raw.githubusercontent.com/ansegura7/ML_ObjectivityDetection/master/image/experiment1.PNG)
+
+### Experiment 2 – SL vs SSL for Dataset 2
+
+Average precision for models of experiment 2:
+
+| Model | Accuracy | Error | # Objective | # Subjective | % Objective | % Subjective |
+|---|---|---|---|---|---|---|
+| Base Line | 63.50 | 36.50 | 635 | 365 | 100.00 | 100.00 |
+| SVM Linear | 68.94 | 31.06 | 502 | 187 | 79.06 | 51.34 |
+| SVM Radial | 72.52 | 27.48 | 503 | 222 | 79.18 | 60.93 |
+| SVM Polynomial | 70.44 | 29.56 | 507 | 198 | 79.81 | 54.14 |
+| SVM Sigmoid | 37.70 | 62.30 | 333 | 44 | 52.47 | 12.00 |
+
+Gradient Boosting Accuracy with Co-Training for Dataset 2:
+
+| Gradient Boosting with CT | 10% of Data | 20% of Data | 30% of Data | 40% of Data | 50% of Data |
+|---|---|---|---|---|---|
+| Global Accuracy | 763.00 | 67.29 | 68.21 | 73.46 | 74.40 |
+
+#### SL vs SSL for Dataset2
+
+![SL vs SSL for Dataset2](https://raw.githubusercontent.com/ansegura7/ML_ObjectivityDetection/master/image/experiment2.PNG)
+
 ## Technologies and Techniques
 - R 3.5.1 x64
 - RStudio - Version 1.1.383

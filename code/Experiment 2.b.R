@@ -14,7 +14,7 @@ ptm <- proc.time()
 library(SSL)
 
 # Set work directory
-setwd("C:/Data/")
+setwd("C:/data/")
 
 # Loading data (View 1)
 dateset <- read.csv("output-stemmed.csv", header = TRUE, sep = ',', dec = '.')
@@ -61,7 +61,6 @@ for(i in 1:nIter) {
   
   # Co-Training and Make prediction
   predict <- sslCoTrain(xl, yl, xu, method1="xgb", nrounds1 = 100, method2="xgb", nrounds2 = 100, n=nLearn)
-  #predict <- sslCoTrain(xl, yl, xu, method1="nb", method2="nb", n=nLearn)
   MC <- table(yu, predict)
   
   # Saving results
