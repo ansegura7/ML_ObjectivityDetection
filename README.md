@@ -1,7 +1,7 @@
 # Co-Training Implementation - Objectivity Detection with R
 Data analytics project in R to create a predictive model for the detection of objectivity in sports articles, based on co-training.
 
-<a href="https://github.com/ansegura7/ML_ObjectivityDetection/blob/master/paper/Co-Training_Implementation_for_Objectivity_Detection.pdf" target="_blank">Paper</a>
+<a href="https://github.com/ansegura7/ML_ObjectivityDetection/blob/master/paper/Co-Training_Implementation_for_Objectivity_Detection.pdf" target="_blank">Paper</a> | <a href="https://github.com/ansegura7/ML_ObjectivityDetection/blob/master/paper/Co-Training_Proposal.pdf" target="_blank">Proposal</a>  | <a href="https://github.com/ansegura7/ML_ObjectivityDetection/tree/master/code/" target="_blank">Code</a>
 
 ## Abstract
 In the current era in which we live, many sports articles are published daily on the Internet, by various authors, which are often written objectively, on other occasions subjectively, which may not please the reader or change your perception of the facts. In the present work, we perform a detection analysis of objectivity to a set of 1000 sports articles, previously labeled using the Mechanical Turk tool from Amazon. For this, we conducted 2 experiments in which the predictive ability of using trained statistical models with supervised versus trained learning with semi-supervised learning was compared. The fact of learning from the original file tagged by Amazon Mechanical Turk and one generated with the TMG+ algorithm based on TF-IDF was also evaluated. The results obtained were very encouraging, since the SL approach generated better results for the original tagged file (precision close to 82.9%), while the SSL approach using Co-Training, generated better results for the dataset created with the own algorithm, with accuracy close to 74.4% using 50% of the data tagged for SSL.
@@ -40,7 +40,7 @@ Gradient Boosting Accuracy with Co-Training for Dataset 1:
 |---|---|---|---|---|---|
 | Global Accuracy | 76.60 | 77.11 | 78.13 | 78.43 | 78.72 |
 
-#### SL vs SSL for Dataset1
+Figure below shows the comparison between the average global precision of the 2 training approaches (SL vs. SSL) for dataset 1.
 
 ![SL vs SSL for Dataset1](https://raw.githubusercontent.com/ansegura7/ML_ObjectivityDetection/master/image/experiment1.PNG)
 
@@ -52,7 +52,7 @@ Average precision for models of experiment 2:
 |---|---|---|---|---|---|---|
 | Base Line | 63.50 | 36.50 | 635 | 365 | 100.00 | 100.00 |
 | SVM Linear | 68.94 | 31.06 | 502 | 187 | 79.06 | 51.34 |
-| SVM Radial | 72.52 | 27.48 | 503 | 222 | 79.18 | 60.93 |
+| **SVM Radial** | 72.52 | 27.48 | 503 | 222 | 79.18 | 60.93 |
 | SVM Polynomial | 70.44 | 29.56 | 507 | 198 | 79.81 | 54.14 |
 | SVM Sigmoid | 37.70 | 62.30 | 333 | 44 | 52.47 | 12.00 |
 
@@ -62,7 +62,7 @@ Gradient Boosting Accuracy with Co-Training for Dataset 2:
 |---|---|---|---|---|---|
 | Global Accuracy | 763.00 | 67.29 | 68.21 | 73.46 | 74.40 |
 
-#### SL vs SSL for Dataset2
+Figure below shows the comparison between the average global precision of the 2 training approaches (SL vs. SSL) for dataset 2.
 
 ![SL vs SSL for Dataset2](https://raw.githubusercontent.com/ansegura7/ML_ObjectivityDetection/master/image/experiment2.PNG)
 
