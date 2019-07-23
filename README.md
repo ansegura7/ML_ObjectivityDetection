@@ -4,13 +4,13 @@ Data analytics project in R to create a predictive model for the detection of ob
 <a href="https://github.com/ansegura7/ML_ObjectivityDetection/blob/master/paper/Co-Training_Implementation_for_Objectivity_Detection.pdf" target="_blank">Paper</a> | <a href="https://github.com/ansegura7/ML_ObjectivityDetection/blob/master/paper/Co-Training_Proposal.pdf" target="_blank">Proposal</a>  | <a href="https://github.com/ansegura7/ML_ObjectivityDetection" target="_blank">Code</a>
 
 ## Abstract
-In the current era in which we live, many sports articles are published daily on the Internet, by various authors, which are often written objectively, on other occasions subjectively, which may not please the reader or change your perception of the facts. In the present work, we perform a detection analysis of objectivity to a set of 1000 sports articles, previously labeled using the Mechanical Turk tool from Amazon. For this, we conducted 2 experiments in which the predictive ability of using trained statistical models with supervised versus trained learning with semi-supervised learning was compared. The fact of learning from the original file tagged by Amazon Mechanical Turk and one generated with the TMG+ algorithm based on TF-IDF was also evaluated. The results obtained were very encouraging, since the SL approach generated better results for the original tagged file (precision close to 82.9%), while the SSL approach using Co-Training, generated better results for the dataset created with the own algorithm, with accuracy close to 74.4% using 50% of the data tagged for SSL.
+Currently, many sports articles are published daily on the Internet, by various authors, which are often written objectively, on other occasions subjectively, which may not please the reader or change your perception of the facts. In the present work, we perform a detection analysis of objectivity to a set of 1000 sports articles, previously labeled using the Mechanical Turk tool from Amazon. For this, we conducted 2 experiments in which the predictive ability of using trained statistical models with supervised versus trained learning with semi-supervised learning was compared. The fact of learning from the original file tagged by Amazon Mechanical Turk and one generated with the TMG+ algorithm based on TF-IDF was also evaluated. The results obtained were very encouraging, since the SL approach generated better results for the original tagged file (precision close to 82.9%), while the SSL approach using Co-Training, generated better results for the dataset created with the own algorithm, with accuracy close to 74.4% using 50% of the data tagged for SSL.
 
 ## Data
 In this project we use two views of the same data, called dataset 1 and dataset 2:
 
 ### Dataset 1
-The dataset 1, has two kinds of files, sports articles and features of the same sports articles. The sports articles are 1000 text files, where each of them contains one sport article in a raw format (plain text). The features file is an excel file composed of a thousand records/rows where each of them correspond to one of the sport articles mentioned before, it is also composed of a series of attributes (59) and a label that states if the article is objective or not.
+This dataset has two kinds of files, sports articles and features of the same sports articles. The sports articles are 1000 text files, where each of them contains one sport article in a raw format. The features file is an excel file composed of a thousand records/rows where each of them correspond to one of the sport articles mentioned before, it is also composed of a series of attributes (59) and a label that states if the article is objective or not.
 
 The 1000 <a href="https://archive.ics.uci.edu/ml/datasets/Sports+articles+for+objectivity+analysis" target="_blank">sports articles</a> were labeled using Amazon Mechanical Turk as objective or subjective. The raw texts, extracted features, and the URLs from which the articles were retrieved are provided. 
 
@@ -27,7 +27,7 @@ Average precision of the models for experiment 1 - second scenario:
 | Model | Accuracy | Error | # Objective | # Subjective | % Objective | % Subjective |
 |---|---|---|---|---|---|---|
 | Base Line | 63.50 | 36.50 | 635 | 365 | 100.00 | 100.00 |
-| Bayes | 79.90 | 20.10 | 567 | 232 | 89.29 | 63.56 |
+| Naive Bayes | 79.90 | 20.10 | 567 | 232 | 89.29 | 63.56 |
 | SVM Linear | 83.40 | 16.60 | 583 | 251 | 91.75 | 68.88 |
 | SVM Poly | 73.53 | 26.47 | 497 | 238 | 78.33 | 65.18 |
 | **Random Forest 200** | 82.89 | 17.11 | 557 | 272 | 87.78 | 74.38 |
