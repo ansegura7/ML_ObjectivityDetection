@@ -60,7 +60,7 @@ Gradient Boosting Accuracy with Co-Training for Dataset 2:
 
 | Gradient Boosting with CT | 10% of Data | 20% of Data | 30% of Data | 40% of Data | 50% of Data |
 |---|---|---|---|---|---|
-| Global Accuracy | 763.00 | 67.29 | 68.21 | 73.46 | 74.40 |
+| Global Accuracy | 63.00 | 67.29 | 68.21 | 73.46 | 74.40 |
 
 Figure below shows the comparison between the average global precision of the 2 training approaches (SL vs. SSL) for dataset 2.
 
