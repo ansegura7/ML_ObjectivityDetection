@@ -1,2 +1,6 @@
 title: Objectivity Detection with R
+description: Data analytics project in R to create a predictive model for the detection of objectivity in sports articles, based on co-training
+show_downloads: true
+google_analytics:
 theme: jekyll-theme-cayman
+
